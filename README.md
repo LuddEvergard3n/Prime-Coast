@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #  Prime Coast - Landing Page Imobiliária
+=======
+# 🏠 Prime Coast - Landing Page Imobiliária
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 <div align="center">
 
@@ -28,6 +32,7 @@
   <img src="https://via.placeholder.com/300x600/0077B6/FFFFFF?text=Mobile+Preview" alt="Mobile Preview" width="300">
 </p>
 
+<<<<<<< HEAD
 ###  [Ver Demo ao Vivo](#) *(adicione o link quando fizer deploy)*
 
 ---
@@ -54,6 +59,34 @@ Criar uma presença online forte e profissional para capturar leads qualificados
 ##  Recursos
 
 ###  Seções Implementadas
+=======
+### 🌐 [Ver Demo ao Vivo](#) *(adicione o link quando fizer deploy)*
+
+---
+
+## 📋 Sobre o Projeto
+
+Landing page profissional desenvolvida para **Imobiliária Prime Coast**, especializada em imóveis residenciais, comerciais e de alto padrão no Brasil.
+
+### 🎯 Objetivo
+
+Criar uma presença online forte e profissional para capturar leads qualificados através de uma experiência visual impactante e navegação intuitiva.
+
+### ✨ Destaques
+
+- 🎨 **Design Moderno** - Interface clean seguindo as melhores práticas de UI/UX
+- 📱 **100% Responsivo** - Funciona perfeitamente em qualquer dispositivo
+- ⚡ **Performance Otimizada** - Carregamento rápido e experiência fluida
+- 🎭 **Animações Suaves** - Microinterações que encantam o usuário
+- 📧 **Formulário de Contato** - Captura de leads integrada
+- 🔍 **SEO Otimizado** - Meta tags e estrutura semântica
+
+---
+
+## 🚀 Recursos
+
+### 📄 Seções Implementadas
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 - [x] **Hero Section** - Banner principal com CTA destacado
 - [x] **Serviços** - Grid com 6 tipos de serviços imobiliários
@@ -64,7 +97,11 @@ Criar uma presença online forte e profissional para capturar leads qualificados
 - [x] **CTA Final** - Chamada para ação com botão WhatsApp
 - [x] **Footer** - Informações de contato e redes sociais
 
+<<<<<<< HEAD
 ###  Design System
+=======
+### 🎨 Design System
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 ```css
 Cores Primárias:
@@ -84,7 +121,11 @@ Componentes:
 - Menu mobile slide-in
 ```
 
+<<<<<<< HEAD
 ###  Funcionalidades
+=======
+### ⚙️ Funcionalidades
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 - ✅ Menu mobile com toggle animado
 - ✅ Smooth scrolling entre seções
@@ -98,7 +139,11 @@ Componentes:
 
 ---
 
+<<<<<<< HEAD
 ##  Tecnologias
+=======
+## 💻 Tecnologias
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 | Tecnologia | Versão | Finalidade |
 |------------|--------|------------|
@@ -118,7 +163,11 @@ Componentes:
 
 ---
 
+<<<<<<< HEAD
 ##  Instalação
+=======
+## 📦 Instalação
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 ### Pré-requisitos
 
@@ -166,7 +215,11 @@ python -m http.server 8000
 
 ---
 
+<<<<<<< HEAD
 ##  Customização
+=======
+## 🎨 Customização
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 ### Alterar Cores
 
@@ -253,7 +306,11 @@ Antes do `</head>`:
 
 ---
 
+<<<<<<< HEAD
 ##  Deploy
+=======
+## 🌐 Deploy
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 ### GitHub Pages (Gratuito)
 
@@ -310,7 +367,11 @@ vercel --prod
 
 ---
 
+<<<<<<< HEAD
 ##  Responsividade
+=======
+## 📱 Responsividade
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 ### Breakpoints Utilizados
 
@@ -378,6 +439,7 @@ prime-coast-landing/
 
 ---
 
+<<<<<<< HEAD
 ##  Roadmap
 
 ### Implementado 
@@ -408,6 +470,9 @@ prime-coast-landing/
 ---
 
 ##  Contribuindo
+=======
+## 🤝 Contribuindo
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 Contribuições são bem-vindas! Siga estes passos:
 
@@ -426,6 +491,7 @@ Contribuições são bem-vindas! Siga estes passos:
 
 ---
 
+<<<<<<< HEAD
 ##  Bugs Conhecidos
 
 Atualmente não há bugs conhecidos. Se encontrar algum, por favor [abra uma issue](https://github.com/seu-usuario/prime-coast-landing/issues).
@@ -451,6 +517,9 @@ copies of the Software...
 ---
 
 ##  Agradecimentos
+=======
+## 🙏 Agradecimentos
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
 
 - [Unsplash](https://unsplash.com) - Fotos de alta qualidade
 - [Font Awesome](https://fontawesome.com) - Ícones
@@ -460,6 +529,7 @@ copies of the Software...
 
 ---
 
+<<<<<<< HEAD
 ##  Estatísticas do Projeto
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/seu-usuario/prime-coast-landing?style=flat-square)
@@ -492,3 +562,12 @@ Se este projeto te ajudou, considere dar uma!
 [⬆ Voltar ao topo](#-prime-coast---landing-page-imobiliária)
 
 </div>
+=======
+<div align="center">
+
+**Desenvolvido com ❤️ para Imobiliária Prime Coast**
+
+[⬆ Voltar ao topo](#-prime-coast---landing-page-imobiliária)
+
+</div>
+>>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
