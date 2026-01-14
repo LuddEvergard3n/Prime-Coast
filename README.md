@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #  Prime Coast - Landing Page Imobiliária
 =======
 # 🏠 Prime Coast - Landing Page Imobiliária
@@ -303,68 +302,6 @@ Antes do `</head>`:
   gtag('config', 'G-XXXXXXXXXX');
 </script>
 ```
-
----
-
-<<<<<<< HEAD
-##  Deploy
-=======
-## 🌐 Deploy
->>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
-
-### GitHub Pages (Gratuito)
-
-1. **Crie um repositório no GitHub**
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/seu-usuario/prime-coast-landing.git
-git push -u origin main
-```
-
-2. **Ative o GitHub Pages**
-   - Vá em **Settings** > **Pages**
-   - Source: **main branch**
-   - Clique em **Save**
-
-3. **Acesse seu site**
-   - `https://seu-usuario.github.io/prime-coast-landing/`
-
-### Netlify (Recomendado)
-
-1. **Via interface web**
-   - Acesse [netlify.com](https://netlify.com)
-   - Arraste a pasta do projeto
-   - Deploy automático em segundos
-   - URL: `https://seu-site.netlify.app`
-
-2. **Via CLI**
-
-```bash
-npm install -g netlify-cli
-netlify login
-netlify deploy --prod
-```
-
-### Vercel
-
-```bash
-npm install -g vercel
-vercel login
-vercel --prod
-```
-
-### Hostinger / Hostgator (Hospedagem tradicional)
-
-1. Acesse o cPanel
-2. Vá em **Gerenciador de Arquivos**
-3. Navegue até `public_html`
-4. Faça upload do `index.html`
-5. Acesse `seudominio.com.br`
-
 ---
 
 <<<<<<< HEAD
@@ -436,37 +373,6 @@ prime-coast-landing/
   </body>
 </html>
 ```
-
----
-
-<<<<<<< HEAD
-##  Roadmap
-
-### Implementado 
-
-- [x] Design responsivo
-- [x] Menu mobile
-- [x] Modal de contato
-- [x] Animações on-scroll
-- [x] SEO básico
-- [x] Integração WhatsApp
-
-### Próximas Features 
-
-- [ ] Integração com backend (Node.js + Nodemailer)
-- [ ] Formulário com envio real de email
-- [ ] Galeria de imóveis com filtros
-- [ ] Sistema de busca avançada
-- [ ] Blog integrado
-- [ ] Página de imóvel individual
-- [ ] Calculadora de financiamento
-- [ ] Tour virtual 360°
-- [ ] Chat ao vivo (Tawk.to)
-- [ ] Multi-idioma (PT/EN/ES)
-- [ ] Modo escuro/claro
-- [ ] PWA (Progressive Web App)
-- [ ] Integração com Google Maps
-
 ---
 
 ##  Contribuindo
@@ -488,13 +394,6 @@ Contribuições são bem-vindas! Siga estes passos:
 - Siga a nomenclatura **BEM** para classes CSS customizadas
 - Comente código complexo
 - Teste em múltiplos navegadores antes de commitar
-
----
-
-<<<<<<< HEAD
-##  Bugs Conhecidos
-
-Atualmente não há bugs conhecidos. Se encontrar algum, por favor [abra uma issue](https://github.com/seu-usuario/prime-coast-landing/issues).
 
 ---
 
@@ -526,48 +425,6 @@ copies of the Software...
 - [Google Fonts](https://fonts.google.com) - Tipografia
 - [Tailwind CSS](https://tailwindcss.com) - Framework CSS
 - [Heroicons](https://heroicons.com) - Ícones SVG
-
----
-
-<<<<<<< HEAD
-##  Estatísticas do Projeto
-
-![GitHub repo size](https://img.shields.io/github/repo-size/seu-usuario/prime-coast-landing?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/seu-usuario/prime-coast-landing?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/seu-usuario/prime-coast-landing?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/seu-usuario/prime-coast-landing?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/seu-usuario/prime-coast-landing?style=flat-square)
-
----
-
-##  Inspiração
-
-Este projeto foi inspirado em:
-- [Loft](https://loft.com.br)
-- [QuintoAndar](https://quintoandar.com.br)
-- [VivaReal](https://vivareal.com.br)
-
----
-
-##  Mostre seu Apoio
-
-Se este projeto te ajudou, considere dar uma!
-
-[![Star on GitHub](https://img.shields.io/github/stars/seu-usuario/prime-coast-landing?style=social)](https://github.com/seu-usuario/prime-coast-landing)
-
----
-
-<div align="center">
-
-[⬆ Voltar ao topo](#-prime-coast---landing-page-imobiliária)
-
-</div>
-=======
-<div align="center">
-
-**Desenvolvido com ❤️ para Imobiliária Prime Coast**
-
-[⬆ Voltar ao topo](#-prime-coast---landing-page-imobiliária)
 
 </div>
 >>>>>>> 2cdedf1c0a74e1903a0f64de92b1581f0788c9ea
