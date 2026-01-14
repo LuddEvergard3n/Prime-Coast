@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Imobiliária Prime Coast - Especialistas em Imóveis Residenciais e Comerciais no Brasil. Consultoria personalizada para compra, venda e aluguel.">
+    <title>Imobiliária Prime Coast - Encontre Seu Imóvel Ideal</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif']
+                    },
+                    colors: {
+                        'primary': '#0077B6',
+                        'primary-dark': '#005F8A',
+                        'accent': '#FFB400',
+                        'accent-green': '#28A745',
+                        'accent-purple': '#6F42C1',
+                        'accent-orange': '#FF6B35',
+                        'dark-bg': '#2C3E50',
+                        'light-bg': '#F8F9FA',
+                        'card-bg': '#EAF3FA'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #F8F9FA;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #0077B6;
+            border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #005F8A;
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-montserrat antialiased bg-white text-gray-800">
+
+    <!-- HEADER -->
+    <header id="header" class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 lg:px-6">
+            <div class="flex items-center justify-between h-20 lg:h-24">
+                
+                <!-- Logo -->
+                <a href="#hero" class="flex-shrink-0 transition-transform hover:scale-105">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
+                            <i class="fas fa-building text-white text-xl lg:text-2xl"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs lg:text-sm text-gray-600 font-medium">Imobiliária</span>
+                            <span class="text-xl lg:text-2xl font-poppins font-bold">
+                                <span class="text-gray-800">Prime</span> 
+                                <span class="text-primary">Coast</span>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#sobre" class="text-gray-700 hover:text-primary font-medium transition-colors">Sobre nós</a>
+                    <a href="#servicos" class="text-gray-700 hover:text-primary font-medium transition-colors">Serviços</a>
+                    <a href="#imoveis" class="text-gray-700 hover:text-primary font-medium transition-colors">Imóveis</a>
+                    <a href="#depoimentos" class="text-gray-700 hover:text-primary font-medium transition-colors">Depoimentos</a>
+                    <a href="#contato" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-all shadow-md hover:shadow-lg">
+                        Encontre Seu Imóvel
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700 hover:text-primary transition-colors p-2">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-gray-200 mt-2 pt-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#sobre" class="text-gray-700 hover:text-primary font-medium transition-colors py-2">Sobre nós</a>
+                    <a href="#servicos" class="text-gray-700 hover:text-primary font-medium transition-colors py-2">Serviços</a>
+                    <a href="#imoveis" class="text-gray-700 hover:text-primary font-medium transition-colors py-2">Imóveis</a>
+                    <a href="#depoimentos" class="text-gray-700 hover:text-primary font-medium transition-colors py-2">Depoimentos</a>
+                    <a href="#contato" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-all text-center block">
+                        Encontre Seu Imóvel
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative min-h-[600px] lg:min-h-[700px] flex items-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop" 
+                alt="Agente imobiliária" 
+                class="w-full h-full object-cover"
+            >
+            <div class="absolute inset-0 bg-gradient-to-r from-dark-bg via-dark-bg/90 to-transparent"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container mx-auto px-4 lg:px-6 relative z-10">
+            <div class="max-w-3xl">
+                
+                <div class="inline-flex items-center gap-2 bg-accent text-dark-bg px-4 py-2 rounded-full font-semibold text-sm mb-6 shadow-lg animate-fade-in">
+                    <i class="fas fa-award"></i>
+                    <span>Especialistas em Imóveis no Brasil</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-poppins font-bold text-white leading-tight mb-6 animate-slide-up">
+                    Encontre o Imóvel Perfeito no Brasil 
+                    <span class="text-accent">Com Confiança</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-gray-200 font-montserrat mb-8 leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+                    Consultoria personalizada em compra, venda e aluguel de imóveis residenciais, comerciais e de alto padrão. Expertise local, assessoria jurídica e transparência total.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 mb-8 animate-slide-up" style="animation-delay: 0.4s;">
+                    <a href="#contato" class="group inline-flex items-center justify-center gap-3 bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition-all shadow-xl hover:shadow-2xl transform hover:scale-105">
+                        <span>Fale com um Especialista</span>
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#imoveis" class="inline-flex items-center justify-center gap-3 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition-all shadow-xl">
+                        <i class="fas fa-search"></i>
+                        <span>Ver Imóveis Disponíveis</span>
+                    </a>
+                </div>
+
+                <p class="text-sm text-gray-300 font-montserrat flex items-center gap-2 flex-wrap animate-fade-in" style="animation-delay: 0.6s;">
+                    <i class="fas fa-check-circle text-accent-green text-lg"></i>
+                    <span>Consulta inicial gratuita • Atendimento personalizado • Suporte jurídico completo</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Wave -->
+        <div class="absolute bottom-0 left-0 right-0 z-10">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="white"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-dark-bg mb-4">
+                    Serviços Especializados em Imóveis
+                </h2>
+                <p class="text-lg text-gray-600 font-montserrat">
+                    Oferecemos soluções completas para todas as suas necessidades imobiliárias no mercado brasileiro
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Serviço 1 -->
+                <div class="group bg-card-bg rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-home text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-dark-bg mb-4">Imóveis Residenciais</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Compra, venda e aluguel de casas, apartamentos e terrenos. Encontre o lar perfeito para sua família.
+                    </p>
+                    <a href="#contato" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                        <span>Saiba mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="group bg-card-bg rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent-green to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-building text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-dark-bg mb-4">Imóveis Comerciais</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Soluções para empresas que buscam escritórios, lojas, galpões e espaços comerciais estratégicos.
+                    </p>
+                    <a href="#contato" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                        <span>Saiba mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="group bg-card-bg rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-yellow-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-crown text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-dark-bg mb-4">Imóveis de Luxo</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Portfolio exclusivo de propriedades premium e alto padrão. Atendimento personalizado para clientes exigentes.
+                    </p>
+                    <a href="#contato" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                        <span>Saiba mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="group bg-card-bg rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent-purple to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-dark-bg mb-4">Consultoria Imobiliária</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Orientação especializada em investimentos, análise de mercado e assessoria jurídica completa.
+                    </p>
+                    <a href="#contato" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                        <span>Saiba mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 5 -->
+                <div class="group bg-card-bg rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent-orange to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-dark-bg mb-4">Investimentos</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Oportunidades de investimento imobiliário com análise de rentabilidade e potencial de valorização.
+                    </p>
+                    <a href="#contato" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                        <span>Saiba mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Serviço 6 -->
+                <div class="group bg-card-bg rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-clipboard-list text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-poppins font-bold text-dark-bg mb-4">Gestão de Propriedades</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Administração completa do seu patrimônio imobiliário, incluindo manutenção e locação.
+                    </p>
+                    <a href="#contato" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                        <span>Saiba mais</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER -->
+    <section id="sobre" class="py-20 bg-gradient-to-br from-card-bg to-white relative overflow-hidden">
+        
+        <div class="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 lg:px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Imagem -->
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop" 
+                            alt="Agente imobiliário" 
+                            class="w-full h-[500px] object-cover"
+                        >
+                    </div>
+
+                    <!-- Stats Card -->
+                    <div class="absolute -bottom-8 left-6 right-6 bg-white rounded-2xl shadow-2xl p-6">
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-poppins font-bold text-primary mb-1">500+</div>
+                                <div class="text-sm text-gray-600 font-medium">Imóveis Vendidos</div>
+                            </div>
+                            <div class="text-center border-x border-gray-200">
+                                <div class="text-3xl font-poppins font-bold text-accent-green mb-1">1200+</div>
+                                <div class="text-sm text-gray-600 font-medium">Clientes Satisfeitos</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-poppins font-bold text-accent mb-1">15+</div>
+                                <div class="text-sm text-gray-600 font-medium">Anos de Experiência</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo -->
+                <div class="lg:pl-8">
+                    
+                    <div class="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        Por Que Escolher a Prime Coast
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-dark-bg mb-6 leading-tight">
+                        Sua Parceira de Confiança no Mercado Imobiliário
+                    </h2>
+
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Na Imobiliária Prime Coast, combinamos expertise local profunda com atendimento personalizado para garantir que cada transação seja transparente e eficiente.
+                    </p>
+
+                    <div class="space-y-5">
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-shield-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-poppins font-bold text-dark-bg mb-2">Transparência Total</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Negociações claras e honestas em cada etapa do processo.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-accent-green to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-balance-scale text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-poppins font-bold text-dark-bg mb-2">Assessoria Jurídica</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Suporte legal especializado para proteger seus interesses.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-accent to-yellow-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marked-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-poppins font-bold text-dark-bg mb-2">Conhecimento Local</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Expertise no mercado brasileiro com insights valiosos.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-accent-purple to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-user-friends text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-poppins font-bold text-dark-bg mb-2">Atendimento Personalizado</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Estratégias personalizadas para alcançar seus objetivos.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- IMÓVEIS -->
+    <section id="imoveis" class="py-20 bg-gradient-to-b from-white to-light-bg">
+        <div class="container mx-auto px-4 lg:px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-dark-bg mb-4">
+                    Imóveis em Destaque
+                </h2>
+                <p class="text-lg text-gray-600 font-montserrat">
+                    Confira uma seleção dos nossos melhores imóveis disponíveis
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                
+                <!-- Imóvel 1 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop" 
+                            alt="Apartamento" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        >
+                        <div class="absolute top-4 left-4 bg-accent-green text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                            Residencial
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-gray-600 mb-3">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            <span class="font-medium">São Paulo, SP</span>
+                        </div>
+                        <h3 class="text-2xl font-poppins font-bold text-dark-bg mb-3">
+                            Apartamento Moderno 3 Quartos
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Imóvel com acabamento premium, varanda gourmet e 2 vagas de garagem.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                            <div class="text-3xl font-poppins font-bold text-primary">R$ 850.000</div>
+                            <a href="#contato" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                                <span>Ver detalhes</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imóvel 2 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
+                            alt="Sala comercial" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        >
+                        <div class="absolute top-4 left-4 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                            Comercial
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-gray-600 mb-3">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            <span class="font-medium">Rio de Janeiro, RJ</span>
+                        </div>
+                        <h3 class="text-2xl font-poppins font-bold text-dark-bg mb-3">
+                            Sala Comercial Centro
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Localização privilegiada, 120m², ar-condicionado central e infraestrutura completa.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                            <div class="text-3xl font-poppins font-bold text-primary">R$ 680.000</div>
+                            <a href="#contato" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                                <span>Ver detalhes</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imóvel 3 -->
+                <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop" 
+                            alt="Casa de luxo" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        >
+                        <div class="absolute top-4 left-4 bg-accent text-dark-bg px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                            Alto Padrão
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-gray-600 mb-3">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            <span class="font-medium">Florianópolis, SC</span>
+                        </div>
+                        <h3 class="text-2xl font-poppins font-bold text-dark-bg mb-3">
+                            Casa de Luxo Frente ao Mar
+                        </h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Casa exclusiva com 5 suítes, piscina infinita e vista panorâmica.
+                        </p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                            <div class="text-3xl font-poppins font-bold text-primary">R$ 4.200.000</div>
+                            <a href="#contato" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                                <span>Ver detalhes</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center">
+                <a href="#contato" class="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <span>Ver Todos os Imóveis</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-dark-bg mb-4">
+                    O Que Nossos Clientes Dizem
+                </h2>
+                <p class="text-lg text-gray-600 font-montserrat">
+                    Histórias reais de quem realizou o sonho do imóvel perfeito
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-gradient-to-br from-card-bg to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 italic">
+                        "Encontrei o apartamento perfeito em menos de um mês. O atendimento foi excepcional e a transparência me deu total segurança."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center">
+                            <span class="text-white font-poppins font-bold text-lg">MC</span>
+                        </div>
+                        <div>
+                            <div class="font-poppins font-bold text-dark-bg">Maria Clara Silva</div>
+                            <div class="text-sm text-gray-600">São Paulo, SP</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-card-bg to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 italic">
+                        "A equipe me ajudou não apenas a comprar, mas a fazer um excelente investimento. A consultoria foi fundamental."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent-green to-green-600 rounded-full flex items-center justify-center">
+                            <span class="text-white font-poppins font-bold text-lg">RA</span>
+                        </div>
+                        <div>
+                            <div class="font-poppins font-bold text-dark-bg">Ricardo Almeida</div>
+                            <div class="text-sm text-gray-600">Rio de Janeiro, RJ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-card-bg to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="flex gap-1 mb-4">
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                        <i class="fas fa-star text-accent text-xl"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6 italic">
+                        "Vendi minha casa rapidamente pelo melhor preço. A estratégia de marketing fez toda a diferença!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent to-yellow-500 rounded-full flex items-center justify-center">
+                            <span class="text-white font-poppins font-bold text-lg">JS</span>
+                        </div>
+                        <div>
+                            <div class="font-poppins font-bold text-dark-bg">Juliana Santos</div>
+                            <div class="text-sm text-gray-600">Florianópolis, SC</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contato" class="py-20 bg-gradient-to-br from-primary to-primary-dark relative overflow-hidden">
+        
+        <div class="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 lg:px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-white mb-6 leading-tight">
+                    Pronto Para Encontrar Seu Imóvel Ideal?
+                </h2>
+
+                <p class="text-xl text-blue-100 mb-10 leading-relaxed">
+                    Nossa equipe está pronta para ajudá-lo. Entre em contato e receba uma consultoria personalizada e gratuita.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+                    <button 
+                        onclick="openModal()" 
+                        class="inline-flex items-center justify-center gap-3 bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105"
+                    >
+                        <i class="fas fa-envelope"></i>
+                        <span>Solicitar Consultoria</span>
+                    </button>
+                    <a 
+                        href="https://wa.me/5511999999999?text=Olá! Gostaria de informações sobre imóveis." 
+                        target="_blank"
+                        class="inline-flex items-center justify-center gap-3 bg-accent-green text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-600 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105"
+                    >
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>Falar no WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-8 text-white">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-accent-green text-2xl"></i>
+                        <span class="font-medium">Resposta em até 24h</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-shield-alt text-accent text-2xl"></i>
+                        <span class="font-medium">100% Seguro</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-star text-accent text-2xl"></i>
+                        <span class="font-medium">Consultoria Gratuita</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-bg text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 lg:px-6">
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
+                            <i class="fas fa-building text-white text-xl"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-gray-400 font-medium">Imobiliária</span>
+                            <span class="text-xl font-poppins font-bold">
+                                <span class="text-white">Prime</span> 
+                                <span class="text-primary">Coast</span>
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Sua parceira de confiança no mercado imobiliário brasileiro.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center transition-all transform hover:scale-110">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center transition-all transform hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-primary hover:bg-primary-dark rounded-full flex items-center justify-center transition-all transform hover:scale-110">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="w-10 h-10 bg-accent-green hover:bg-green-600 rounded-full flex items-center justify-center transition-all transform hover:scale-110">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-poppins font-bold mb-6">Navegação</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#hero" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition-colors">Sobre nós</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="#imoveis" class="text-gray-400 hover:text-white transition-colors">Imóveis</a></li>
+                        <li><a href="#depoimentos" class="text-gray-400 hover:text-white transition-colors">Depoimentos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-poppins font-bold mb-6">Serviços</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#servicos" class="text-gray-400 hover:text-white transition-colors">Residenciais</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-white transition-colors">Comerciais</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-white transition-colors">Luxo</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-white transition-colors">Consultoria</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-white transition-colors">Gestão</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-poppins font-bold mb-6">Contato</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <span>Av. Paulista, 1000<br>São Paulo, SP</span>
+                        </li>
+                        <li>
+                            <a href="tel:+551199999999" class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-phone-alt text-primary"></i>
+                                <span>+55 11 99999-9999</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contato@primecoast.com.br" class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-envelope text-primary"></i>
+                                <span>contato@primecoast.com.br</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-gray-700">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="text-gray-400 text-sm text-center md:text-left">
+                        © 2026 Imobiliária Prime Coast. Todos os direitos reservados.
+                    </p>
+                    <div class="flex flex-wrap gap-6 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacidade</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Termos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            
+            <div class="bg-gradient-to-r from-primary to-primary-dark text-white p-6 rounded-t-2xl">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-2xl font-poppins font-bold">Solicitar Consultoria</h3>
+                    <button onclick="closeModal()" class="text-white hover:text-gray-200 transition-colors text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <p class="text-blue-100 mt-2">Preencha o formulário abaixo</p>
+            </div>
+
+            <div class="p-6">
+                <form id="form" onsubmit="handleSubmit(event)" class="space-y-5">
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Nome Completo *</label>
+                        <input 
+                            type="text" 
+                            required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                            placeholder="Seu nome completo"
+                        >
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">E-mail *</label>
+                        <input 
+                            type="email" 
+                            required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                            placeholder="seu@email.com"
+                        >
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Telefone *</label>
+                        <input 
+                            type="tel" 
+                            required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                            placeholder="(11) 99999-9999"
+                        >
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Interesse *</label>
+                        <select 
+                            required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                        >
+                            <option value="">Selecione</option>
+                            <option value="comprar">Comprar imóvel</option>
+                            <option value="vender">Vender imóvel</option>
+                            <option value="alugar">Alugar imóvel</option>
+                            <option value="investir">Investimento</option>
+                            <option value="consultoria">Consultoria</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Mensagem</label>
+                        <textarea 
+                            rows="4"
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"
+                            placeholder="Conte-nos mais..."
+                        ></textarea>
+                    </div>
+
+                    <button 
+                        type="submit" 
+                        class="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                        Enviar Solicitação
+                    </button>
+
+                    <div id="message" class="hidden"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal
+        function openModal() {
+            document.getElementById('modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Form submit (simulado)
+        function handleSubmit(e) {
+            e.preventDefault();
+            const message = document.getElementById('message');
+            message.className = 'p-4 rounded-lg text-center font-medium bg-green-100 text-green-800 border border-green-300';
+            message.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Mensagem enviada com sucesso! Entraremos em contato em breve.';
+            message.classList.remove('hidden');
+            
+            setTimeout(() => {
+                closeModal();
+                document.getElementById('form').reset();
+                message.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-xl');
+            } else {
+                header.classList.remove('shadow-xl');
+            }
+        });
+
+        // Close modal on ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Close modal on outside click
+        document.getElementById('modal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('modal')) {
+                closeModal();
+            }
+        });
+
+        // Smooth scroll for mobile menu links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
